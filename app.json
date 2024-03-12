@@ -577,7 +577,17 @@
         "key_watch_tv",
         "key_channel_up",
         "key_channel_down",
-        "key_source"
+        "key_source",
+        "key_digit_0",
+        "key_digit_1",
+        "key_digit_2",
+        "key_digit_3",
+        "key_digit_4",
+        "key_digit_5",
+        "key_digit_6",
+        "key_digit_7",
+        "key_digit_8",
+        "key_digit_9"
       ],
       "id": "remote",
       "settings": [
@@ -771,6 +781,206 @@
       "uiComponent": "button",
       "uiQuickAction": true,
       "icon": "assets/capabilities/cursor_up.svg"
+    },
+    "key_digit_0": {
+      "type": "boolean",
+      "title": {
+        "en": "0",
+        "nl": "0",
+        "de": "0",
+        "fr": "0",
+        "it": "0",
+        "sv": "0",
+        "no": "0",
+        "es": "0",
+        "da": "0",
+        "pl": "0"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_0.svg"
+    },
+    "key_digit_1": {
+      "type": "boolean",
+      "title": {
+        "en": "1",
+        "nl": "1",
+        "de": "1",
+        "fr": "1",
+        "it": "1",
+        "sv": "1",
+        "no": "1",
+        "es": "1",
+        "da": "1",
+        "pl": "1"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_1.svg"
+    },
+    "key_digit_2": {
+      "type": "boolean",
+      "title": {
+        "en": "2",
+        "nl": "2",
+        "de": "2",
+        "fr": "2",
+        "it": "2",
+        "sv": "2",
+        "no": "2",
+        "es": "2",
+        "da": "2",
+        "pl": "2"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_2.svg"
+    },
+    "key_digit_3": {
+      "type": "boolean",
+      "title": {
+        "en": "3",
+        "nl": "3",
+        "de": "3",
+        "fr": "3",
+        "it": "3",
+        "sv": "3",
+        "no": "3",
+        "es": "3",
+        "da": "3",
+        "pl": "3"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_3.svg"
+    },
+    "key_digit_4": {
+      "type": "boolean",
+      "title": {
+        "en": "4",
+        "nl": "4",
+        "de": "4",
+        "fr": "4",
+        "it": "4",
+        "sv": "4",
+        "no": "4",
+        "es": "4",
+        "da": "4",
+        "pl": "4"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_4.svg"
+    },
+    "key_digit_5": {
+      "type": "boolean",
+      "title": {
+        "en": "5",
+        "nl": "5",
+        "de": "5",
+        "fr": "5",
+        "it": "5",
+        "sv": "5",
+        "no": "5",
+        "es": "5",
+        "da": "5",
+        "pl": "5"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_5.svg"
+    },
+    "key_digit_6": {
+      "type": "boolean",
+      "title": {
+        "en": "6",
+        "nl": "6",
+        "de": "6",
+        "fr": "6",
+        "it": "6",
+        "sv": "6",
+        "no": "6",
+        "es": "6",
+        "da": "6",
+        "pl": "6"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_6.svg"
+    },
+    "key_digit_7": {
+      "type": "boolean",
+      "title": {
+        "en": "7",
+        "nl": "7",
+        "de": "7",
+        "fr": "7",
+        "it": "7",
+        "sv": "7",
+        "no": "7",
+        "es": "7",
+        "da": "7",
+        "pl": "7"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_7.svg"
+    },
+    "key_digit_8": {
+      "type": "boolean",
+      "title": {
+        "en": "8",
+        "nl": "8",
+        "de": "8",
+        "fr": "8",
+        "it": "8",
+        "sv": "8",
+        "no": "8",
+        "es": "8",
+        "da": "8",
+        "pl": "8"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_8.svg"
+    },
+    "key_digit_9": {
+      "type": "boolean",
+      "title": {
+        "en": "9",
+        "nl": "9",
+        "de": "9",
+        "fr": "9",
+        "it": "9",
+        "sv": "9",
+        "no": "9",
+        "es": "9",
+        "da": "9",
+        "pl": "9"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "assets/capabilities/digit_9.svg"
     },
     "key_fast_forward": {
       "type": "boolean",

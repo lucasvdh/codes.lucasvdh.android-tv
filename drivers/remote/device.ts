@@ -1,6 +1,6 @@
 import {Remote} from "../../remote";
 import {DeviceSettings, DeviceStore, SettingsInput} from "./types";
-import AndroidTVRemoteClient, {Input, Volume} from "./client";
+import AndroidTVRemoteClient, {Digit, Input, Volume} from "./client";
 import RemoteMessage from "../../androidtv-remote/remote/RemoteMessage";
 
 /**
@@ -34,16 +34,16 @@ class RemoteDevice extends Remote {
     'key_channel_up',
     'key_channel_down',
     // 'key_info',
-    // 'key_digit_1',
-    // 'key_digit_2',
-    // 'key_digit_3',
-    // 'key_digit_4',
-    // 'key_digit_5',
-    // 'key_digit_6',
-    // 'key_digit_7',
-    // 'key_digit_8',
-    // 'key_digit_9',
-    // 'key_digit_0',
+    'key_digit_1',
+    'key_digit_2',
+    'key_digit_3',
+    'key_digit_4',
+    'key_digit_5',
+    'key_digit_6',
+    'key_digit_7',
+    'key_digit_8',
+    'key_digit_9',
+    'key_digit_0',
     // 'key_dot',
     'key_options',
     'key_back',
@@ -223,32 +223,31 @@ class RemoteDevice extends Remote {
       return this.client?.sendKeyDpadRight();
     } else if (typeof capability.key_cursor_down !== 'undefined') {
       return this.client?.sendKeyDpadDown();
+    } else if (typeof capability.key_digit_0 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit0)
+    } else if (typeof capability.key_digit_1 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit1)
+    } else if (typeof capability.key_digit_2 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit2)
+    } else if (typeof capability.key_digit_3 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit3)
+    } else if (typeof capability.key_digit_4 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit4)
+    } else if (typeof capability.key_digit_5 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit5)
+    } else if (typeof capability.key_digit_6 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit6)
+    } else if (typeof capability.key_digit_7 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit7)
+    } else if (typeof capability.key_digit_8 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit8)
+    } else if (typeof capability.key_digit_9 !== 'undefined') {
+        return this.client?.sendKeyDigit(Digit.Digit9)
     }
         // else if (typeof capability.key_info !== 'undefined') {
         //     return this.sendKey('Info')
-        // } else if (typeof capability.key_digit_0 !== 'undefined') {
-        //     return this.sendKey('Digit0')
-        // } else if (typeof capability.key_digit_1 !== 'undefined') {
-        //     return this.sendKey('Digit1')
-        // } else if (typeof capability.key_digit_2 !== 'undefined') {
-        //     return this.sendKey('Digit2')
-        // } else if (typeof capability.key_digit_3 !== 'undefined') {
-        //     return this.sendKey('Digit3')
-        // } else if (typeof capability.key_digit_4 !== 'undefined') {
-        //     return this.sendKey('Digit4')
-        // } else if (typeof capability.key_digit_5 !== 'undefined') {
-        //     return this.sendKey('Digit5')
-        // } else if (typeof capability.key_digit_6 !== 'undefined') {
-        //     return this.sendKey('Digit6')
-        // } else if (typeof capability.key_digit_7 !== 'undefined') {
-        //     return this.sendKey('Digit7')
-        // } else if (typeof capability.key_digit_8 !== 'undefined') {
-        //     return this.sendKey('Digit8')
-        // } else if (typeof capability.key_digit_9 !== 'undefined') {
-        //     return this.sendKey('Digit9')
         // } else if (typeof capability.key_dot !== 'undefined') {
         //     return this.sendKey('Dot')
-    // }
     else if (typeof capability.key_options !== 'undefined') {
       return this.client?.sendKeyMenu();
     } else if (typeof capability.key_back !== 'undefined') {
@@ -387,6 +386,26 @@ class RemoteDevice extends Remote {
       this.client?.sendKeyBack(direction);
     } else if (key === 'key_home') {
       this.client?.sendKeyHome(direction);
+    } else if(key === 'key_digit_0') {
+      this.client?.sendKeyDigit(Digit.Digit0, direction);
+    } else if(key === 'key_digit_1') {
+      this.client?.sendKeyDigit(Digit.Digit1, direction);
+    } else if(key === 'key_digit_2') {
+      this.client?.sendKeyDigit(Digit.Digit2, direction);
+    } else if(key === 'key_digit_3') {
+      this.client?.sendKeyDigit(Digit.Digit3, direction);
+    } else if(key === 'key_digit_4') {
+      this.client?.sendKeyDigit(Digit.Digit4, direction);
+    } else if(key === 'key_digit_5') {
+      this.client?.sendKeyDigit(Digit.Digit5, direction);
+    } else if(key === 'key_digit_6') {
+      this.client?.sendKeyDigit(Digit.Digit6, direction);
+    } else if(key === 'key_digit_7') {
+      this.client?.sendKeyDigit(Digit.Digit7, direction);
+    } else if(key === 'key_digit_8') {
+      this.client?.sendKeyDigit(Digit.Digit8, direction);
+    } else if(key === 'key_digit_9') {
+      this.client?.sendKeyDigit(Digit.Digit9, direction);
     }
   }
 
@@ -496,6 +515,46 @@ class RemoteDevice extends Remote {
         key: 'key_home',
         name: this.homey.__(`key.home`)
       },
+      {
+        key: 'key_digit_0',
+        name: this.homey.__(`key.digit_0`)
+      },
+      {
+        key: 'key_digit_1',
+        name: this.homey.__(`key.digit_1`)
+      },
+      {
+        key: 'key_digit_2',
+        name: this.homey.__(`key.digit_2`)
+      },
+      {
+        key: 'key_digit_3',
+        name: this.homey.__(`key.digit_3`)
+      },
+      {
+        key: 'key_digit_4',
+        name: this.homey.__(`key.digit_4`)
+      },
+      {
+        key: 'key_digit_5',
+        name: this.homey.__(`key.digit_5`)
+      },
+      {
+        key: 'key_digit_6',
+        name: this.homey.__(`key.digit_6`)
+      },
+      {
+        key: 'key_digit_7',
+        name: this.homey.__(`key.digit_7`)
+      },
+      {
+        key: 'key_digit_8',
+        name: this.homey.__(`key.digit_8`)
+      },
+      {
+        key: 'key_digit_9',
+        name: this.homey.__(`key.digit_9`)
+      }
     ];
   }
 }

@@ -36,6 +36,16 @@
     "channel_down": "Canale giù",
     "options": "Opzioni",
     "back": "Indietro",
-    "home": "Home"
+    "home": "Home",
+    "digit_0": "0",
+    "digit_1": "1",
+    "digit_2": "2",
+    "digit_3": "3",
+    "digit_4": "4",
+    "digit_5": "5",
+    "digit_6": "6",
+    "digit_7": "7",
+    "digit_8": "8",
+    "digit_9": "9"
   }
 }

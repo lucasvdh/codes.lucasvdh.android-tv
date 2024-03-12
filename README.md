@@ -12,6 +12,7 @@ The app provides various commands to your TV, such as:
 - Confirm
 - Home
 - Set input to HDMI 1
+- 0-9 key
 
 ## Requirements
 To use this app, you need to connect your Android device to your Homey. Please note that because this requires a local connection to your TV, it needs a Homey Pro to function properly.

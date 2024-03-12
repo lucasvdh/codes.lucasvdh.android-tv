@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "8",
+    "nl": "8",
+    "de": "8",
+    "fr": "8",
+    "it": "8",
+    "sv": "8",
+    "no": "8",
+    "es": "8",
+    "da": "8",
+    "pl": "8"
+  },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "assets/capabilities/digit_8.svg"
+}
