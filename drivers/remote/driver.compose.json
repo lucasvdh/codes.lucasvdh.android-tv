@@ -159,6 +159,16 @@
     "key_watch_tv",
     "key_channel_up",
     "key_channel_down",
-    "key_source"
+    "key_source",
+    "key_digit_0",
+    "key_digit_1",
+    "key_digit_2",
+    "key_digit_3",
+    "key_digit_4",
+    "key_digit_5",
+    "key_digit_6",
+    "key_digit_7",
+    "key_digit_8",
+    "key_digit_9"
   ]
 }

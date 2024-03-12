@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "0",
+    "nl": "0",
+    "de": "0",
+    "fr": "0",
+    "it": "0",
+    "sv": "0",
+    "no": "0",
+    "es": "0",
+    "da": "0",
+    "pl": "0"
+  },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "assets/capabilities/digit_0.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "4",
+    "nl": "4",
+    "de": "4",
+    "fr": "4",
+    "it": "4",
+    "sv": "4",
+    "no": "4",
+    "es": "4",
+    "da": "4",
+    "pl": "4"
+  },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "assets/capabilities/digit_4.svg"
+}

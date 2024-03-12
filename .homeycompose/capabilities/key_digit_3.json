@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "3",
+    "nl": "3",
+    "de": "3",
+    "fr": "3",
+    "it": "3",
+    "sv": "3",
+    "no": "3",
+    "es": "3",
+    "da": "3",
+    "pl": "3"
+  },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "assets/capabilities/digit_3.svg"
+}

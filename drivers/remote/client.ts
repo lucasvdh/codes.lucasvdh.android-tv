@@ -20,6 +20,32 @@ export interface Volume {
   muted: boolean;
 }
 
+export enum Digit {
+  Digit0,
+  Digit1,
+  Digit2,
+  Digit3,
+  Digit4,
+  Digit5,
+  Digit6,
+  Digit7,
+  Digit8,
+  Digit9,
+}
+
+const digitRemoteKeyCodeMap: { [Key in Digit]: number} = {
+  [Digit.Digit0]: RemoteKeyCode.KEYCODE_0,
+  [Digit.Digit1]: RemoteKeyCode.KEYCODE_1,
+  [Digit.Digit2]: RemoteKeyCode.KEYCODE_2,
+  [Digit.Digit3]: RemoteKeyCode.KEYCODE_3,
+  [Digit.Digit4]: RemoteKeyCode.KEYCODE_4,
+  [Digit.Digit5]: RemoteKeyCode.KEYCODE_5,
+  [Digit.Digit6]: RemoteKeyCode.KEYCODE_6,
+  [Digit.Digit7]: RemoteKeyCode.KEYCODE_7,
+  [Digit.Digit8]: RemoteKeyCode.KEYCODE_8,
+  [Digit.Digit9]: RemoteKeyCode.KEYCODE_9,
+}
+
 export default class AndroidTVRemoteClient {
   private client: AndroidRemote;
 
@@ -196,6 +222,14 @@ export default class AndroidTVRemoteClient {
 
   public sendKeyMenu(direction: number | null = null): void {
     this.client.sendKey(RemoteKeyCode.KEYCODE_MENU, direction || RemoteDirection.SHORT)
+  }
+
+  public sendKeyDigit(digit: Digit, direction: number | null = null): void {
+    if(digit in digitRemoteKeyCodeMap) {
+      this.client.sendKey(digitRemoteKeyCodeMap[digit], direction || RemoteDirection.SHORT)
+    } else {
+      throw new Error('Invalid digit');
+    }
   }
 
   public openApplication(application: string): void {
